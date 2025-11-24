@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calculater.css">
+</head>
+<body class="body">
+
+  <div class="calculatorbox">
+    <input class="inputbox" type="text" id="button" readonly style="font-size: 24px;">
+    <br><br>
+    <button class="button" onclick="button+='1';document.getElementById('button').value=button;">1</button>
+    <button class="button" onclick="button+='2';document.getElementById('button').value=button;">2</button>
+    <button class="button" onclick="button+='3';document.getElementById('button').value=button;">3</button>
+    <button class="button" onclick="button+='+';document.getElementById('button').value=button;">+</button><br><br>
+    <button class="button" onclick="button+='4';document.getElementById('button').value=button;">4</button>
+    <button class="button" onclick="button+='5';document.getElementById('button').value=button;">5</button>
+    <button class="button" onclick="button+='6';document.getElementById('button').value=button;">6</button>
+    <button class="button" onclick="button+='-';document.getElementById('button').value=button;">-</button><br><br>
+    <button class="button" onclick="button+='7';document.getElementById('button').value=button;">7</button>
+    <button class="button" onclick="button+='8';document.getElementById('button').value=button;">8</button>
+    <button class="button" onclick="button+='9';document.getElementById('button').value=button;">9</button>
+    <button class="button" onclick="button+='*';document.getElementById('button').value=button;">*</button><br><br>
+    <button class="button" onclick="button='';document.getElementById('button').value=button;">AC</button>
+    <button class="button" onclick="button+='0';document.getElementById('button').value=button;">0</button>
+    <button class="button" onclick="button+='/';document.getElementById('button').value=button;">/</button>
+    <button class="button" onclick="try{button=eval(button).toString();}catch(e){button='Error';}document.getElementById('button').value=button;">=</button>
+  </div>
+
+  <script>
+    let button = '';
+    document.getElementById('button').value = button;
+  </script>
+
+</body>
+</html>
